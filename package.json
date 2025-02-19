@@ -1,0 +1,15 @@
+{
+  "name": "green-horizon-capstone-code",
+  "version": "1.0.0",
+  "description": "IT 493 Team 5 Green Horizon Capstone Website Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.7",
+    "tailwindcss": "^4.0.7"
+  }
+}
