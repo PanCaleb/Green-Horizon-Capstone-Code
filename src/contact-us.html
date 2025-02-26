@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/css/output.css" rel="stylesheet"> 
+    <link rel="icon" type="image/x-icon" href="../images/whiteltfavicon.png">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>LT Services Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex items-center">
+            <!-- Logo (Left-Aligned) -->
+            <a href="#" class="mr-auto">
+                <img src="../images/whiteltlogo.png" alt="LT Services Inc." href="./index.html">
+            </a>
+    
+            <!-- Menu Button (Mobile) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none ml-auto">☰</button>
+    
+            <!-- Navbar Links (Centered) -->
+            <ul id="menu" class="hidden md:flex justify-center space-x-6 mx-auto">
+                <li><a href="./index.html" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#services" class="hover:underline">Services</a></li>
+                <li><a href="#careers" class="hover:underline">Careers</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="max-w-5xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Left Side: Request a Call Form -->
+        <div class="bg-gray-200 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Request a Call</h2>
+            <p class="text-gray-600 mb-6">Fill out the form and we’ll call you as soon as possible.</p>
+    
+            <form action="" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700 font-semibold">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+    
+                <div>
+                    <label for="phone" class="block text-gray-700 font-semibold">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required
+                        class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+    
+                <div>
+                    <label for="time" class="block text-gray-700 font-semibold">Best Time to Call</label>
+                    <select id="time" name="time"
+                        class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                        <option value="evening">Evening (4 PM - 8 PM)</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition">
+                        Request a Call
+                    </button>
+                </div>
+            </form>
+        </div>
+    
+        <!-- Right Side: Company Contact Information -->
+        <div class="p-6 bg-gray-200 text-black rounded-lg shadow-md h-full">
+            <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+            <p class="text-black">Have other questions? Reach out to us directly.</p>
+    
+            <div class="mt-4 space-y-4">
+                <div>
+                    <h3 class="font-semibold">📍 Address</h3>
+                    <p>2815 Hartland Rd, Suite 300<br>Falls Church, VA<br>22043</p>
+                </div>
+    
+                <div>
+                    <h3 class="font-semibold">📞 Phone</h3>
+                    <p>(703) 698-8838</p>
+                </div>
+    
+                <div>
+                    <h3 class="font-semibold">📠 Fax</h3>
+                    <p>(703) 698-8909</p>
+                </div>
+    
+                <div>
+                    <h3 class="font-semibold">✉ Email</h3>
+                    <p>contact@yourcompany.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Google Maps Section (Properly Centered) -->
+    <div class="max-w-5xl mx-auto mt-10 text-center">
+        <!-- Heading (Centered) -->
+        <h2 class="text-2xl font-bold mb-4">Find Us on Google Maps</h2>
+    
+        <!-- Centered Map (Matches Form Width) -->
+        <div class="w-full h-80 rounded-lg overflow-hidden shadow-md">
+            <iframe 
+                class="w-full h-full border-0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13152.90635475681!2d-77.52754575!3d38.78556095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64b68a7b02d1d%3A0x42601e8222c083d6!2sL%20T%20Services%20Inc!5e1!3m2!1sen!2sus!4v1740558856169!5m2!1sen!2sus"
+                allowfullscreen 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>    
+    
+    <!--Footer-->
+    <section>
+        <footer class="footer mt-10">
+            <p>2025 LT Services Inc. All rights reserved</p>
+            <p class></p>
+        </footer>
+    </section>
+</body>

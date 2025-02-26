@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: InterVariable, sans-serif;
+    --footer-bg: theme(colors.blue.600);
+    --footer-text: theme(colors.white);
+}
+
+@layer components {
+    .footer {
+        @apply bg-[var(--footer-bg)] text-[var(--footer-text)] text-center py-4 mt-auto w-full;
+        position: relative
+    }
+    .footer-links {
+        @apply flex justify-center space-x-4 mt-2;
+    }
+    .footer-links a {
+        @apply hover:text-[var(--footer-hover)];
+    }
+}
