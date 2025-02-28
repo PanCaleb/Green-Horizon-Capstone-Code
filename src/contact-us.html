@@ -13,22 +13,32 @@
 
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white p-4 shadow-md">
-        <div class="container mx-auto flex items-center">
+        <div class="container mx-auto flex justify-between items-center">
             <!-- Logo (Left-Aligned) -->
-            <a href="#" class="mr-auto">
-                <img src="../images/whiteltlogo.png" alt="LT Services Inc." href="./index.html">
+            <a href="./index.html" class="mr-auto">
+                <img src="../images/whiteltlogo.png" alt="LT Services Inc.">
             </a>
     
             <!-- Menu Button (Mobile) -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none ml-auto">☰</button>
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
     
             <!-- Navbar Links (Centered) -->
-            <ul id="menu" class="hidden md:flex justify-center space-x-6 mx-auto">
+            <ul id="menu" class="hidden md:flex gap-6">
                 <li><a href="./index.html" class="hover:underline">Home</a></li>
-                <li><a href="#about" class="hover:underline">About</a></li>
+    
+                <!-- About Dropdown -->
+                <li class="relative group">
+                    <a href="./about-us.html" class="hover:underline">About</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
+                    </ul>
+                </li>
+    
                 <li><a href="#services" class="hover:underline">Services</a></li>
                 <li><a href="#careers" class="hover:underline">Careers</a></li>
-                <li><a href="#contact" class="hover:underline">Contact</a></li>
+                <li><a href="./contact-us.html" class="hover:underline">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -93,7 +103,7 @@
     
                 <div>
                     <h3 class="font-semibold">✉ Email</h3>
-                    <p>contact@yourcompany.com</p>
+                    <p> info@ltservicesinc.com</p>
                 </div>
             </div>
         </div>
@@ -119,7 +129,7 @@
     <!--Footer-->
     <section>
         <footer class="footer mt-10">
-            <p>2025 LT Services Inc. All rights reserved</p>
+            <p>	&copy; 2025 LT Services Inc. All rights reserved.</p>
             <p class></p>
         </footer>
     </section>

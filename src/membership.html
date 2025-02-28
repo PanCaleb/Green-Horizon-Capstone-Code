@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/css/output.css" rel="stylesheet"> 
+    <link rel="icon" type="image/x-icon" href="../images/whiteltfavicon.png">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>LT Services Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo (Left-Aligned) -->
+            <a href="./index.html" class="mr-auto">
+                <img src="../images/whiteltlogo.png" alt="LT Services Inc.">
+            </a>
+    
+            <!-- Menu Button (Mobile) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
+    
+            <!-- Navbar Links (Centered) -->
+            <ul id="menu" class="hidden md:flex gap-6">
+                <li><a href="./index.html" class="hover:underline">Home</a></li>
+    
+                <!-- About Dropdown -->
+                <li class="relative group">
+                    <a href="./about-us.html" class="hover:underline">About</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="#services" class="hover:underline">Services</a></li>
+                <li><a href="#careers" class="hover:underline">Careers</a></li>
+                <li><a href="./contact-us.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>  
+    
+    <section id="membership" class="py-10 bg-white">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-8">Our Memberships</h2>
+    
+            <!-- Membership Container (Individual Cards Stretch to Full Width) -->
+            <div class="space-y-4 max-w-screen-xl mx-auto px-4 md:px-8">
+                
+                <!-- Organization 1 -->
+                <div class="flex items-center gap-6 bg-gray-200 p-6 w-full rounded-xl">
+                    <img src="../images/BSCAI_Logo (1).svg" alt="Organization 1" class="w-64 h-64 object-contain">
+                    <div class="flex flex-col">
+                        <p class="text-gray-800">
+                            Our company delivers the quality service that you expect in a building service contractor. Our commitment to quality is exemplified 
+                            by our membership in Building Service Contractors Association International (BSCAI).
+                        </p>
+                        <p class="mt-4 text-gray-800">
+                            <strong>What does our membership in BSCAI mean for You?</strong>
+                        </p>
+                        <p class="mt-2">
+                            Our membership in Building Service Contractors Association International (BSCAI) demonstrates our professional commitment to quality. 
+                            We are a professional firm in the business of building management, and our membership in BSCAI helps us to stay on top of the industry. 
+                            Our membership in BSCAI gives us the competitive edge, so that we can bring you the quality and service that you deserve and expect.
+                        </p>
+
+                    </div>
+                </div>
+    
+                <!-- Organization 2 -->
+                <div class="flex items-center gap-6 bg-gray-200 p-6 w-full rounded-xl">
+                    <img src="../images/iicrccertifiedlogo_300x300.svg" alt="IICRC" class="w-64 h-64 object-contain">
+                    <div class="flex flex-col">
+                        <p class="text-gray-800">
+                            The Clean Trust Certified (IICRC) has served as the Industry Guardian for the cleaning, inspection and restoration service industries for 
+                            more than 30 years.As a non-profit certification organization, the IICRC helps ensure that you have access to trusted and trained cleaning 
+                            professionals by establishing and monitoring certification programs and standards for these industries. To learn more about IICRC, please visit 
+                            <a href="https://www.iicrc.org" class="text-blue-600">www.iicrc.org.</a>
+                        </p>
+                        <p class="mt-4">
+                            LT participates in a Special Training Program provided for custodial professionals by the Clean Trust Certified (Institute of Inspection, Cleaning, 
+                            and Restoration) (IICRC). LT is certified with the IICRC. Each year, we select three outstanding On-Site Supervisors and award them with fully paid 
+                            tuition, boarding and travel to attend the IICRC certification program. LT's employees currently have IICRC certifications on the following:
+                        </p>
+                        <ul class="list-disc list-inside pl-6 text-gray-800">
+                            <li>Odor Control</li>
+                            <li>Water Damage Restoration</li>
+                            <li>Commercial Carpet Maintenance Tech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <section>
+        <footer class="footer mt-10">
+            <p>	&copy; 2025 LT Services Inc. All rights reserved.</p>
+            <p class></p>
+        </footer>
+    </section>
+</body>

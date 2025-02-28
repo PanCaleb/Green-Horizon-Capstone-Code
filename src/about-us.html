@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/css/output.css" rel="stylesheet"> 
+    <link rel="icon" type="image/x-icon" href="../images/whiteltfavicon.png">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>LT Services Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo (Left-Aligned) -->
+            <a href="./index.html" class="mr-auto">
+                <img src="../images/whiteltlogo.png" alt="LT Services Inc.">
+            </a>
+    
+            <!-- Menu Button (Mobile) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
+    
+            <!-- Navbar Links (Centered) -->
+            <ul id="menu" class="hidden md:flex gap-6">
+                <li><a href="./index.html" class="hover:underline">Home</a></li>
+    
+                <!-- About Dropdown -->
+                <li class="relative group">
+                    <a href="./about-us.html" class="hover:underline">About</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="#services" class="hover:underline">Services</a></li>
+                <li><a href="#careers" class="hover:underline">Careers</a></li>
+                <li><a href="./contact-us.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The actual Content (About Us, Leadership, Mision Statement)--> 
+    <!--About Us-->
+    <section id="about-us" class="py-5 bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-blue-600">About Us</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
+                The founders of L.T. Services, Inc., created the company in 1982 with one simple objective in mind: to provide high-quality and flexible management at reasonable costs to commercial and government organizations. As simple as this 
+                objective was, it has encompassed the corporate culture at L.T. Services, and affected all major corporate decisions made by our organization in the past 20 plus years. We are happy to report that this tradition is very much alive.
+            </p>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
+                To ensure high-quality services, L.T. Services employs staff members who are highly trained in various areas of expertise. We periodically update our work force knowledge on new techniques and provide profit sharing as an incentive for excellent performance. Our managers monitor the work daily to ensure that they have taken special care to give clients a hassle free 
+                environment. We are currently managing housekeeping projects totaling more than 4.8 million square feet of net cleaning space including, Federal Government, State and local government properties, higher education institutions, medical centers, and a large number of commercial office buildings in Metropolitan Areas. These properties range from 40,000 to 1.2 million square 
+                feet of net cleaning space in a single facility. We are currently employing more than 150 employees and 25 professional management staff.            
+            </p>
+        </div>
+    </section>
+    
+    <!--Mission Statement-->
+
+    <section id="about-us" class="py-5 bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-blue-600">Mission Statement</h2>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Mission Statement Will Go Here.</p>
+        </div>
+    </section>
+
+    <!--Leadership-->
+
+    <section id="about-us" class="py-5 bg-white text-center">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl font-bold text-blue-600">Leadership</h2>
+            <div class="bg-gray-200 p-6 rounded-lg shadow-md mt-4">
+                <div class="grid grid-cols-1 md: grid-cols-2 lg:">
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/256x256" alt="CEO" class="w-64 h-64 object-cover rounded-lg">
+                        <h3 class="text-lg font-semibold mt-3">CEO</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/256x256" alt="President" class="w-64 h-64 object-cover rounded-lg">
+                        <h3 class="text-lg font-semibold mt-3">President</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+    
+    <!--Footer-->
+    <section>
+        <footer class="footer mt-10">
+            <p>	&copy; 2025 LT Services Inc. All rights reserved.</p>
+            <p class></p>
+        </footer>
+    </section>
+</body>
