@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>LT Services Inc.</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="bg-gray-100">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -17,68 +18,148 @@
         once: true       // Animates only once
     });
 </script>
-  
+<script>
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+            const offset = 80; // Adjust for fixed navbar height
+            const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
+
+    
     <!-- Navbar -->
-    <nav class="bg-blue-600 text-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo (Left-Aligned) -->
-            <a href="./index.html" class="mr-auto">
-                <img src="../images/whiteltlogo.png" alt="LT Services Inc.">
-            </a>
-    
-            <!-- Menu Button (Mobile) -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
-    
-            <!-- Navbar Links (Centered) -->
-            <ul id="menu" class="hidden md:flex gap-6">
-                <li><a href="./index.html" class="hover:underline">Home</a></li>
-    
-                <!-- About Dropdown -->
-                <li class="relative group">
-                    <a href="./about-us.html" class="hover:underline">About</a>
-                    
-                    <!-- Dropdown Menu -->
-                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                        <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
-                    </ul>
-                </li>
-    
-                <li><a href="#services" class="hover:underline">Services</a></li>
-                <li><a href="#careers" class="hover:underline">Careers</a></li>
-                <li><a href="./contact-us.html" class="hover:underline">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="bg-blue-600 text-white p-4 shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo (Left-Aligned) -->
+        <a href="./index.html" class="mr-auto">
+            <img src="../images/whiteltlogo.png" alt="LT Services Inc.">
+        </a>
+
+        <!-- Menu Button (Mobile) -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
+
+        <!-- Navbar Links (Centered) -->
+        <ul id="menu" class="hidden md:flex gap-6">
+            <li><a href="./index.html" class="hover:underline">Home</a></li>
+            
+
+            <!-- About Dropdown -->
+            <li class="relative group">
+                <a href="./about-us.html" class="hover:underline">About</a>
+                
+                <!-- Dropdown Menu -->
+                <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
+                </ul>
+            </li>
+
+            
+            <li><a href="./services.html" class="hover:underline">Services</a></li>
+
+            <li><a href="#careers" class="hover:underline">Careers</a></li>
+            <li><a href="./contact-us.html" class="hover:underline">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 
     <!-- The actual Content (About Us, Leadership, Mision Statement)--> 
-    <!--About Us-->
-    <section id="about-us" class="py-5 bg-white text-center">
-        <div class="container mx-auto" data-aos="fade-down">
-            <h2 class="text-3xl font-bold text-blue-600">About Us</h2>
-            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
-                The founders of L.T. Services, Inc., created the company in 1982 with one simple objective in mind: to provide high-quality and flexible management at reasonable costs to commercial and government organizations. As simple as this 
-                objective was, it has encompassed the corporate culture at L.T. Services, and affected all major corporate decisions made by our organization in the past 20 plus years. We are happy to report that this tradition is very much alive.
-            </p>
-            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
-                To ensure high-quality services, L.T. Services employs staff members who are highly trained in various areas of expertise. We periodically update our work force knowledge on new techniques and provide profit sharing as an incentive for excellent performance. Our managers monitor the work daily to ensure that they have taken special care to give clients a hassle free 
-                environment. We are currently managing housekeeping projects totaling more than 4.8 million square feet of net cleaning space including, Federal Government, State and local government properties, higher education institutions, medical centers, and a large number of commercial office buildings in Metropolitan Areas. These properties range from 40,000 to 1.2 million square 
-                feet of net cleaning space in a single facility. We are currently employing more than 150 employees and 25 professional management staff.            
-            </p>
-        </div>
-    </section>
-    
-    <!-- Our Service in Numbers-->
+    <!-- About Us -->
+<section id="about-us" class="pt-32 pb-10 bg-white text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-blue-600" data-aos="fade-down">About Us</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
+            The founders of L.T. Services, Inc., created the company in 1982 with one simple objective in mind: to provide high-quality and flexible management at reasonable costs to commercial and government organizations. As simple as this 
+            objective was, it has encompassed the corporate culture at L.T. Services, and affected all major corporate decisions made by our organization in the past 20 plus years. We are happy to report that this tradition is very much alive.
+        </p>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
+            To ensure high-quality services, L.T. Services employs staff members who are highly trained in various areas of expertise. We periodically update our workforce knowledge on new techniques and provide profit sharing as an incentive for excellent performance. Our managers monitor the work daily to ensure that they have taken special care to give clients a hassle-free 
+            environment. We are currently managing housekeeping projects totaling more than 4.8 million square feet of net cleaning space including Federal Government, State and local government properties, higher education institutions, medical centers, and a large number of commercial office buildings in Metropolitan Areas. These properties range from 40,000 to 1.2 million square 
+            feet of net cleaning space in a single facility. We are currently employing more than 150 employees and 25 professional management staff.            
+        </p>
+    </div>
+</section>
 
-    <section id="about-us" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="relative z-10 max-w-3xl mx-auto px-6">
-            <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600" data-aos="fade-down">Our Services in Numbers</h2>
-            <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600 opacity-0" data-aos="fade-up"> "this is left blank"     </h2>
-            <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">> 20 years of experience</h2>
-            <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="600" data-aos="fade-down">> 150 employees</h2>
-            <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="600" data-aos="fade-down">> 30 clients</h2>
-        </div>
-    </section>
+    
+  <!-- Our Service in Numbers -->
+<section id="services-numbers" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed" 
+style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">
+    <div class="absolute inset-0 bg-black/60" data-aos="fade-in"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-6">
+        <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600" data-aos="fade-down">Our Services in Numbers</h2>
+        <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600 opacity-0"> "this is left blank" </h2>
+        <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">
+            > <span class="counter" data-target="20">0</span> years of experience
+        </h2>
+        <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">
+            > <span class="counter" data-target="150">0</span> employees
+        </h2>
+        <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">
+            > <span class="counter" data-target="30">0</span> clients
+        </h2>
+    </div>
+</section>
+
+<!-- JavaScript for Number Animation -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll(".counter");
+
+    const animateCounter = (counter, start, end, duration) => {
+        let startTime = null;
+
+        const step = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const easedValue = Math.floor(start + (end - start) * easeOutQuad(progress));
+
+            counter.innerText = easedValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                counter.innerText = end; // Ensure exact final number
+            }
+        };
+
+        requestAnimationFrame(step);
+    };
+
+    const easeOutQuad = (t) => 1 - (1 - t) * (1 - t); // Easing function for smooth animation
+
+    const startCounters = () => {
+        setTimeout(() => {  // 🔹 Added delay before counting starts
+            counters.forEach(counter => {
+                const endValue = +counter.getAttribute("data-target");
+                animateCounter(counter, 0, endValue, 2000); // 2000ms (2 seconds) duration
+            });
+        }, 1000); // 🔹 Delay of 1 second (1000ms)
+    };
+
+    // Trigger animation when the section is in view
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounters();
+                observer.disconnect(); // Runs animation only once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector("#services-numbers"));
+});
+</script>
+
 
     <!--Mission and Vision-->
 
