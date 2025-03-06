@@ -17,7 +17,7 @@
         once: true       // Animates only once
     });
 </script>
-
+  
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
@@ -79,27 +79,53 @@
             <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="600" data-aos="fade-down">> 30 clients</h2>
         </div>
     </section>
-    
 
-    <!--Leadership-->
+    <!--Mission and Vision-->
 
     <section id="about-us" class="py-5 bg-white text-center">
         <div class="container mx-auto max-w-5xl">
             <h2 class="text-3xl font-bold text-blue-600">Leadership</h2>
-            <div class="bg-gray-200 p-6 rounded-lg shadow-md mt-4">
-                <div class="grid grid-cols-1 md: grid-cols-2 lg:">
-                    <div class="flex flex-col items-center">
-                        <img src="https://placehold.co/256x256" alt="CEO" class="w-64 h-64 object-cover rounded-lg">
-                        <h3 class="text-lg font-semibold mt-3">CEO</h3>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <img src="https://placehold.co/256x256" alt="President" class="w-64 h-64 object-cover rounded-lg">
-                        <h3 class="text-lg font-semibold mt-3">President</h3>
-                    </div>
+    
+            <!-- Grid Layout for Side-by-Side Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                
+                <!-- First Card (CEO) -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105">
+                    <img src="../images/Target.png" alt="CEO" class="w-64 h-64 object-cover rounded-lg">
+                    <h3 class="text-lg mt-10">	
+                        Our mission is to provide quality service to each and every customer at a reasonable cost. We strive to 
+                        be the first-choice provider of a totally customized package that is sensible to your budget and needs. 
+                        In fulfilling its mission, L.T. Services Inc. will adhere to the following values:
+                    </h3>
+                    <ul class="list-disc list-outside pl-8 text-black mt-8 text-left">
+                        <li>Build and sustain trusting relationships with our clients and employees</li>
+                        <li>Provide employees with the opportunity for professional growth</li>
+                        <li>Focus on what we do best while exploring and responding to new business opportunities</li>
+                    </ul>
                 </div>
+    
+                <!-- Second Card (President) -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105">
+                    <img src="../images/Mission.png" alt="President" class="w-64 h-64 object-cover rounded-lg">
+                    <h3 class="text-lg mt-10">	
+                        L.T. Services Inc. continues to dominate the building service industry. We take pride in 
+                        our superior customer service with a robust and productive workforce. Through stable growth
+                        and development, we will lead while attracting employees with positive attitudes to carry us 
+                        into the 21st century. We are a professional building service provider that:
+                    </h3>
+                    <ul class="list-disc list-outside pl-8 text-black mt-8 text-left">
+                        <li>Has Employees and Clients that we can grow with</li>
+                        <li>Attracts the best within the industry</li>
+                        <li>Embraces knowledge and innovation</li>
+                        <li>Leads, never follows</li>
+                    </ul>
+                </div>
+    
             </div>
         </div>
-    </section>   
+    </section>
+    
+      
     
     <!--Footer-->
     <section>
