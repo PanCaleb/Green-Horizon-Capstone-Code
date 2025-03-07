@@ -8,9 +8,34 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>LT Services Inc.</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="bg-gray-100">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,  // Animation duration (1s)
+            once: true       // Animates only once
+        });
+    </script>
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+    
+                const target = document.querySelector(this.getAttribute("href"));
+                const offset = 80; // Adjust for fixed navbar height
+                const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - offset;
+    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+    
     <!-- Navbar -->
     <nav id="navbar" class="bg-blue-700 text-white p-2 shadow-md fixed top-6 left-0 w-full z-50 rounded-3xl transition-transform duration-300">
         <div class="container mx-auto flex justify-between items-center">
@@ -44,8 +69,9 @@
     </nav>
     <script src="./js/navbar.js"></script>
     <section class="max-w-5xl mx-auto mt-32 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
         <!-- Left Side: Request a Call Form -->
-        <div class="bg-gray-200 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-200 p-6 rounded-lg shadow-md" data-aos="fade-right" data-aos-delay="600" data-aos-easing="ease-out-back">
             <h2 class="text-2xl font-bold mb-4">Request a Call</h2>
             <p class="text-gray-600 mb-6">Fill out the form and we’ll call you as soon as possible.</p>
     
@@ -79,12 +105,12 @@
                     </button>
                 </div>
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="http://127.0.0.1:8080/Green-Horizon-Capstone-Code/src/contact-us.html"> 
+                <!-- <input type="hidden" name="_next" value="http://127.0.0.1:8080/Green-Horizon-Capstone-Code/src/contact-us.html"> -->
             </form>
         </div>
     
         <!-- Right Side: Company Contact Information -->
-        <div class="p-6 bg-gray-200 text-black rounded-lg shadow-md h-full">
+        <div class="p-6 bg-gray-200 text-black rounded-lg shadow-md h-full" data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-out-back">
             <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
             <p class="text-black">Have other questions? Reach out to us directly.</p>
     
@@ -113,7 +139,7 @@
     </section>
     
     <!-- Google Maps Section (Properly Centered) -->
-    <div class="max-w-5xl mx-auto mt-10 text-center">
+    <div class="max-w-5xl mx-auto mt-10 text-center" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-out-back">
         <!-- Heading (Centered) -->
         <h2 class="text-2xl font-bold mb-4">Find Us on Google Maps</h2>
     
