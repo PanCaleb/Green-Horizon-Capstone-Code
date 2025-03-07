@@ -39,40 +39,37 @@
 
    
     <!-- Navbar -->
-<nav class="bg-blue-600 text-white p-4 shadow-md fixed top-0 left-0 w-full z-50">
-    <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo (Left-Aligned) -->
-        <a href="./index.html" class="mr-auto">
-            <img src="../images/whiteltlogo.png" alt="LT Services Inc.">
-        </a>
+    <nav id="navbar" class="bg-blue-700 text-white p-2 shadow-md fixed top-6 left-0 w-full z-50 rounded-3xl transition-transform duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo (Left-Aligned) -->
+            <a href="./index.html" class="mr-auto">
+                <img src="../images/whiteltlogo.png" alt="LT Services Inc." class="h-10">
+            </a>
 
-        <!-- Menu Button (Mobile) -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
+            <!-- Menu Button (Mobile) -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none text-2xl">☰</button>
 
-        <!-- Navbar Links (Centered) -->
-        <ul id="menu" class="hidden md:flex gap-6">
-            <li><a href="./index.html" class="hover:underline">Home</a></li>
-            
+            <!-- Navbar Links (Centered) -->
+            <ul id="menu" class="hidden md:flex gap-6 absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-blue-600 md:bg-transparent text-center md:text-left md:flex-row flex-col shadow-md md:shadow-none">
+                <li><a href="./index.html" class="transform transition duration-50 hover:scale-110 block px-4 py-2 md:px-0">Home</a></li>
 
-            <!-- About Dropdown -->
-            <li class="relative group">
-                <a href="./about-us.html" class="hover:underline">About</a>
-                
-                <!-- Dropdown Menu -->
-                <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
-                </ul>
-            </li>
+                <!-- About Dropdown -->
+                <li class="relative group">
+                    <a href="./about-us.html" class="transform transition duration-50 hover:scale-110 block px-4 py-2 md:px-0">About</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
+                    </ul>
+                </li>
 
-            
-            <li><a href="./services.html" class="hover:underline">Services</a></li>
-
-            <li><a href="#careers" class="hover:underline">Careers</a></li>
-            <li><a href="./contact-us.html" class="hover:underline">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
+                <li><a href="./services.html" class="transform transition duration-50 hover:scale-110 block px-4 py-2 md:px-0">Services</a></li>
+                <li><a href="#careers" class="transform transition duration-50 hover:scale-110 block px-4 py-2 md:px-0">Careers</a></li>
+                <li><a href="./contact-us.html" class="transform transition duration-50 hover:scale-110 block px-4 py-2 md:px-0">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="./js/navbar.js"></script>
 
     <!-- Hero Section with Fade-in on Scroll -->
 <section class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">
@@ -85,7 +82,7 @@
         <p class="mt-4 text-lg drop-shadow-md" data-aos="fade-up" data-aos-delay="200">
             L.T. Services Inc. offers complete janitorial services to commercial and government facilities. Based in Falls Church, Virginia, we have over 25 years of experience providing high-quality service.
         </p>
-        <a href="./contact-us.html" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition shadow-lg" data-aos="fade-up" data-aos-delay="400">
+        <a href="./contact-us.html" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition shadow-lg hover:scale-110">
             Contact Us
         </a>
     </div>
@@ -113,7 +110,7 @@
                 </div>
             </div>
             
-            <a href="./services.html" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition" data-aos-delay="200" data-aos="fade-in">
+            <a href="./services.html" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition hover:scale-105">
                 More Services
             </a>
 
@@ -144,15 +141,20 @@
     <section id="careers" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
         <div class="relative z-10 max-w-3xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600" data-aos="fade-down">Join Our Team</h2>
-        <p class="mt-4 text-lg drop-shadow-md text-white-600 max-w-2xl mx-auto" data-aos-delay="200" data-aos="fade-up">
-            Interested in working at L.T. Services? We're always looking for dedicated individuals to join our team.
-        </p>
-        <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition" data-aos-delay="600" data-aos="fade-in">
-            Apply Now
-        </a>
+            <h2 class="text-5xl font-extrabold drop-shadow-md text-white" data-aos="fade-down">
+                Join Our Team
+            </h2>
+            <p class="mt-4 text-lg drop-shadow-md text-white max-w-2xl mx-auto" data-aos-delay="200" data-aos="fade-up">
+                Interested in working at L.T. Services? We're always looking for dedicated individuals to join our team.
+            </p>
+            
+            <a href="./contact-us.html" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold
+             hover:bg-blue-700 transform transition-transform duration-300 ease-out hover:scale-110 hover:shadow-2xl"> Apply Now
+            </a>
+
         </div>
     </section>
+    
 
     <!--Footer-->
     <section>
