@@ -8,9 +8,34 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>LT Services Inc.</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="bg-white">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,  // Animation duration (1s)
+            once: true       // Animates only once
+        });
+    </script>
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+    
+                const target = document.querySelector(this.getAttribute("href"));
+                const offset = 80; // Adjust for fixed navbar height
+                const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - offset;
+    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+    
     <!-- Navbar -->
     <nav id="navbar" class="bg-blue-700 text-white p-2 shadow-md fixed top-6 left-0 w-full z-50 rounded-3xl transition-transform duration-300">
         <div class="container mx-auto flex justify-between items-center">
@@ -44,14 +69,14 @@
     </nav>
     <script src="./js/navbar.js"></script> 
     
-    <section id="membership" class="py-10 bg-white">
+    <section id="membership" class="py-10 bg-white" data-aos="fade-down">
             <h2 class="text-3xl font-bold text-blue-600 text-center pt-12">Our Memberships</h2>
     
             <!-- Membership Container (Individual Cards Stretch to Full Width) -->
             <div class="space-y-4 max-w-screen-xl mx-auto px-4 md:px-8 mt-4">
                 
                 <!-- Organization 1 -->
-                <div class="flex items-center gap-6 bg-gray-200 p-6 w-full rounded-xl">
+                <div class="flex items-center gap-6 bg-gray-200 p-6 w-full rounded-xl" data-aos="fade-right" data-aos-delay="600" data-aos-easing="ease-out-back">
                     <img src="../images/BSCAI_Logo (1).svg" alt="Organization 1" class="w-64 h-64 object-contain">
                     <div class="flex flex-col">
                         <p class="text-gray-800">
@@ -71,7 +96,7 @@
                 </div>
     
                 <!-- Organization 2 -->
-                <div class="flex items-center gap-6 bg-gray-200 p-6 w-full rounded-xl">
+                <div class="flex items-center gap-6 bg-gray-200 p-6 w-full rounded-xl" data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-out-back">
                     <img src="../images/iicrccertifiedlogo_300x300.svg" alt="IICRC" class="w-64 h-64 object-contain">
                     <div class="flex flex-col">
                         <p class="text-gray-800">
