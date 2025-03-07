@@ -69,59 +69,81 @@
     <script src="./js/navbar.js"></script>
     
    <!-- Services Section -->
-   <section id="services" class="py-16 bg-gray-200 text-center">
-    <div class="container mx-auto">
-        <h2 class="text-3xl pt-10 font-bold text-blue-600" data-aos="fade-down">What We Offer</h2>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105">
-                <img src="../images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Office Cleaning" class="rounded-lg">
+<section id="services" class="pt-40 pb-16 bg-gray-100 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-200 to-gray-100 opacity-50"></div>
+
+    <div class="relative z-10 container mx-auto">
+        <h2 class="text-4xl font-bold text-blue-700" data-aos="fade-down">What We Offer</h2>
+        <p class="text-gray-700 mt-3 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="200">
+            Our range of services ensures that your space remains clean, organized, and well-maintained.
+        </p>
+
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Service Card -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="200">
+                <img src="../images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Office Cleaning" class="rounded-lg h-48 w-full object-cover">
                 <h3 class="text-xl font-semibold text-gray-800 mt-4">Office Cleaning</h3>
                 <p class="text-gray-600 mt-2">Use our comprehensive cleaning services to keep your workspace clean, organized, and productive. To keep your office tidy and 
                     functional, we provide thorough cleaning, disinfecting, and organization services.
-                </p>
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105">
-                <img src="../images/pexels-le-thanh-huyen-1056408622-20727438 (2).jpg" alt="Residential Cleaning" class="rounded-lg">
+
+            <!-- Landscaping -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="300">
+                <img src="../images/pexels-le-thanh-huyen-1056408622-20727438.jpg" alt="Landscaping" class="rounded-lg h-48 w-full object-cover">
                 <h3 class="text-xl font-semibold text-gray-800 mt-4">Landscaping</h3>
                 <p class="text-gray-600 mt-2">Our landscaping services include enhancing outdoor spaces, and upkeeping existing ones.
-                    The landscaping team works closely with clients to provide landscapes that suit their style, budget, and maintenance schedule    
-                </p>
+                    The landscaping team works closely with clients to provide landscapes that suit their style, budget, and maintenance schedule
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105">
-                <img src="../images/pexels-sliceisop-4737704.jpg" alt="Deep Cleaning" class="rounded-lg">
+
+            <!-- Custodial Services -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="400">
+                <img src="../images/pexels-sliceisop-4737704.jpg" alt="Custodial Services" class="rounded-lg h-48 w-full object-cover">
                 <h3 class="text-xl font-semibold text-gray-800 mt-4">Custodial Services</h3>
                 <p class="text-gray-600 mt-2">We provide reliable custodial services, which include daily cleaning, floor care, and waste management, to keep your area hygienic, 
                     sanitized, and well-maintained. To maintain a clean and safe environment, our skilled staff are trained on industry-standard procedures.
-                </p>
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105">
-                <img src="../images/pexels-karolina-grabowska-4239067.jpg" alt="Emergency Cleaning" class="rounded-lg">
+
+            <!-- Emergency Cleaning -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="500">
+                <img src="../images/pexels-karolina-grabowska-4239067.jpg" alt="Emergency Cleaning" class="rounded-lg h-48 w-full object-cover">
                 <h3 class="text-xl font-semibold text-gray-800 mt-4">Emergency Cleaning</h3>
                 <p class="text-gray-600 mt-2">Our emergency cleaning services ensure quick and efficient cleanup for unexpected spills, accidents, or urgent sanitation needs, keeping your space safe and hygienic.
-                </p>
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105" >
-                <img src="../images/pexels-matilda-wormwood-4098021.jpg" alt="Viral/Flu Outbreak Cleaning & Disinfecting" class="rounded-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mt-4">Viral/Flu Cleaning & Disinfecting</h3>
-                <p class="text-gray-600 mt-2">Protect your environment with our specialized cleaning and disinfecting services, designed to minimize the spread of viruses and bacteria while maintaining a healthy space.
-                </p>
+
+            <!-- Viral Cleaning -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="600">
+                <img src="../images/pexels-matilda-wormwood-4098021.jpg" alt="Viral Cleaning" class="rounded-lg h-48 w-full object-cover">
+                <h3 class="text-xl font-semibold text-gray-800 mt-4">Viral/Flu Cleaning</h3>
+                <p class="text-gray-600 mt-2">Protect your environment with our specialized cleaning and disinfecting services, designed to minimize the spread of viruses and bacteria while maintaining a healthy space.</p>
+                
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105" >
-                <img src="../images/pexels-kseniachernaya-5691510.jpg" alt="Construction Cleaning" class="rounded-lg">
+
+            <!-- Construction Cleaning -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="700">
+                <img src="../images/pexels-kseniachernaya-5691510.jpg" alt="Construction Cleaning" class="rounded-lg h-48 w-full object-cover">
                 <h3 class="text-xl font-semibold text-gray-800 mt-4">Construction Cleaning</h3>
-                <p class="text-gray-600 mt-2">Our post-construction cleaning services remove dust, debris, and residue, ensuring your newly built or renovated space is spotless, safe, and move-in ready.
-                </p>
+                <p class="text-gray-600 mt-2">Our post-construction cleaning services remove dust, debris, and residue, ensuring your newly built or renovated space is spotless, safe, and move-in ready.</p>
+                
             </div>
-            <div class="bg-white p-6 shadow-md rounded-lg transform transition duration-300 hover:scale-105" >
-                <img src="../images/pexels-bertellifotografia-17056963.jpg" alt="Black Tie & White Shirt Event Support" class="rounded-lg">
+            <!-- Black Tie & White Shirt Event Support -->
+            <div class="relative bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" 
+                 data-aos="fade-up" data-aos-delay="700">
+                <img src="../images/pexels-bertellifotografia-17056963.jpg" alt="Construction Cleaning" class="rounded-lg h-48 w-full object-cover">
                 <h3 class="text-xl font-semibold text-gray-800 mt-4">Black Tie & White Shirt Event Support</h3>
-                <p class="text-gray-600 mt-2">Ensure a seamless and polished event with our professional cleaning and maintenance services before, during, and after your formal gatherings.
-                </p>
+                <p class="text-gray-600 mt-2">Ensure a seamless and polished event with our professional cleaning and maintenance services before, during, and after your formal gatherings..</p>
+                
             </div>
         </div>
-        
-        </div>
-    </section>
+    </div>
+</section>
+
 
          <!-- Contact Us Section -->
     <section id="Contact Us" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">

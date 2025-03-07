@@ -71,41 +71,72 @@
     <script src="./js/navbar.js"></script>
 
 
-    <!-- The actual Content (About Us, Leadership, Mision Statement)--> 
-    <!-- About Us -->
+<!-- About Us Section with Visuals & Animations -->
 <section id="about-us" class="pt-24 pb-10 bg-white text-center">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-blue-600" data-aos="fade-down">About Us</h2>
-        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
-            The founders of L.T. Services, Inc., created the company in 1982 with one simple objective in mind: to provide high-quality and flexible management at reasonable costs to commercial and government organizations. As simple as this 
-            objective was, it has encompassed the corporate culture at L.T. Services, and affected all major corporate decisions made by our organization in the past 20 plus years. We are happy to report that this tradition is very much alive.
-        </p>
-        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">	
-            To ensure high-quality services, L.T. Services employs staff members who are highly trained in various areas of expertise. We periodically update our workforce knowledge on new techniques and provide profit sharing as an incentive for excellent performance. Our managers monitor the work daily to ensure that they have taken special care to give clients a hassle-free 
-            environment. We are currently managing housekeeping projects totaling more than 4.8 million square feet of net cleaning space including Federal Government, State and local government properties, higher education institutions, medical centers, and a large number of commercial office buildings in Metropolitan Areas. These properties range from 40,000 to 1.2 million square 
-            feet of net cleaning space in a single facility. We are currently employing more than 150 employees and 25 professional management staff.            
-        </p>
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-blue-600 mb-8" data-aos="fade-down">About Us</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Side: Text Content -->
+            <div class="text-left space-y-6" data-aos="fade-right">
+                <p class="text-gray-800 max-w-md">
+                    The founders of L.T. Services, Inc. created the company in 1982 with one simple objective: 
+                    to provide high-quality and flexible management at reasonable costs to commercial and 
+                    government organizations. This objective has shaped our corporate culture and decision-making 
+                    for over 20 years.
+                </p>
+                <p class="text-gray-800 max-w-md">
+                    To ensure high-quality services, we employ staff who are highly trained in various areas. 
+                    We provide continuous training, profit-sharing incentives, and expert supervision to ensure 
+                    outstanding performance.
+                </p>
+            </div>
+
+            <!-- Right Side: Animated Image -->
+            <div data-aos="fade-left">
+                <img src="../images/ashwini-chaudhary-monty-Iu6parQAO-U-unsplash.jpg" 
+                     alt="About Us Image" 
+                     class="w-full sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
     </div>
 </section>
 
+
     
   <!-- Our Service in Numbers -->
-<section id="services-numbers" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed" 
+<section id="services-numbers" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat bg-fixed mt-32" 
 style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">
-    <div class="absolute inset-0 bg-black/60" data-aos="fade-in"></div>
-    <div class="relative z-10 max-w-3xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600" data-aos="fade-down">Our Services in Numbers</h2>
-        <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600 opacity-0"> "this is left blank" </h2>
-        <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">
-            > <span class="counter" data-target="20">0</span> years of experience
-        </h2>
-        <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">
-            > <span class="counter" data-target="150">0</span> employees
-        </h2>
-        <h2 class="text-3xl font-extrabold drop-shadow-md text-white-600" data-aos-delay="400" data-aos="fade-down">
-            > <span class="counter" data-target="30">0</span> clients
-        </h2>
+
+<!-- Dark Overlay -->
+<div class="absolute inset-0 bg-black/60" data-aos="fade-in"></div>
+
+<div class="relative z-10 max-w-4xl mx-auto px-6">
+    <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600" data-aos="fade-down">Our Services in Numbers</h2>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center" data-aos="zoom-in">
+            <h3 class="text-4xl font-bold text-blue-600">
+                <span class="counter" data-target="20">0</span>+
+            </h3>
+            <p class="text-gray-600 mt-2">Years of Experience</p>
+        </div>
+
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center" data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="text-4xl font-bold text-blue-600">
+                <span class="counter" data-target="150">0</span>+
+            </h3>
+            <p class="text-gray-600 mt-2">Employees</p>
+        </div>
+
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center" data-aos="zoom-in" data-aos-delay="400">
+            <h3 class="text-4xl font-bold text-blue-600">
+                <span class="counter" data-target="30">0</span>+
+            </h3>
+            <p class="text-gray-600 mt-2">Clients</p>
+        </div>
     </div>
+</div>
 </section>
 
 <!-- JavaScript for Number Animation -->
@@ -159,58 +190,52 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-    <!--Mission and Vision-->
+   <!-- Mission and Vision Section (Now with Bounce Effect) -->
+<section id="mission-vision" class="py-16 bg-white text-center mt-32" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-out-back">
+    <div class="container mx-auto max-w-5xl">
+        <h2 class="text-3xl font-bold text-blue-600" data-aos="fade-down" data-aos-delay="300" data-aos-easing="ease-out-back">
+            Leadership
+        </h2>
 
-    <section id="about-us" class="py-5 bg-white text-center">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-blue-600">Leadership</h2>
-    
-            <!-- Grid Layout for Side-by-Side Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                
-                <!-- First Card (CEO) -->
-                <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105">
-                    <img src="../images/Target.png" alt="CEO" class="w-64 h-64 object-cover rounded-lg">
-                    <h3 class="text-lg mt-10">	
-                        Our mission is to provide quality service to each and every customer at a reasonable cost. We strive to 
-                        be the first-choice provider of a totally customized package that is sensible to your budget and needs. 
-                        In fulfilling its mission, L.T. Services Inc. will adhere to the following values:
-                    </h3>
-                    <ul class="list-disc list-outside pl-8 text-black mt-8 text-left">
-                        <li>Build and sustain trusting relationships with our clients and employees</li>
-                        <li>Provide employees with the opportunity for professional growth</li>
-                        <li>Focus on what we do best while exploring and responding to new business opportunities</li>
-                    </ul>
-                </div>
-    
-                <!-- Second Card (President) -->
-                <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105">
-                    <img src="../images/Mission.png" alt="President" class="w-64 h-64 object-cover rounded-lg">
-                    <h3 class="text-lg mt-10">	
-                        L.T. Services Inc. continues to dominate the building service industry. We take pride in 
-                        our superior customer service with a robust and productive workforce. Through stable growth
-                        and development, we will lead while attracting employees with positive attitudes to carry us 
-                        into the 21st century. We are a professional building service provider that:
-                    </h3>
-                    <ul class="list-disc list-outside pl-8 text-black mt-8 text-left">
-                        <li>Has Employees and Clients that we can grow with</li>
-                        <li>Attracts the best within the industry</li>
-                        <li>Embraces knowledge and innovation</li>
-                        <li>Leads, never follows</li>
-                    </ul>
-                </div>
-    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- First Card (CEO) -->
+            <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105" 
+                data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back">
+                <img src="../images/Target.png" alt="CEO" class="w-64 h-64 object-cover rounded-lg">
+                <h3 class="text-lg mt-10">	
+                    Our mission is to provide quality service to each and every customer at a reasonable cost. 
+                    We strive to be the first-choice provider of a customized package that is sensible to your budget and needs.
+                </h3>
+                <ul class="list-disc list-outside pl-8 text-black mt-8 text-left">
+                    <li>Build and sustain trusting relationships with our clients and employees</li>
+                    <li>Provide employees with the opportunity for professional growth</li>
+                    <li>Focus on what we do best while exploring and responding to new business opportunities</li>
+                </ul>
+            </div>
+
+            <!-- Second Card (President) -->
+            <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transform transition duration-300 hover:scale-105" 
+                data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-out-back">
+                <img src="../images/Mission.png" alt="President" class="w-64 h-64 object-cover rounded-lg">
+                <h3 class="text-lg mt-10">	
+                    L.T. Services Inc. continues to dominate the building service industry. We take pride in 
+                    our superior customer service with a robust and productive workforce. 
+                </h3>
+                <ul class="list-disc list-outside pl-8 text-black mt-8 text-left">
+                    <li>Has Employees and Clients that we can grow with</li>
+                    <li>Attracts the best within the industry</li>
+                    <li>Embraces knowledge and innovation</li>
+                    <li>Leads, never follows</li>
+                </ul>
             </div>
         </div>
-    </section>
-    
-      
-    
-    <!--Footer-->
-    <section>
-        <footer class="footer mt-10">
-            <p>	&copy; 2025 LT Services Inc. All rights reserved.</p>
-            <p class></p>
-        </footer>
-    </section>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer mt-10 bg-blue-700 text-white text-center py-4">
+    <p>&copy; 2025 LT Services Inc. All rights reserved.</p>
+</footer>
+
 </body>
