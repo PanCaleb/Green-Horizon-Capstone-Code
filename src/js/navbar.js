@@ -12,5 +12,5 @@ window.addEventListener("scroll", function () {
         navbar.classList.remove("hidden-navbar");
     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });

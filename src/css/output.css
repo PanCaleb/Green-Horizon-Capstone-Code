@@ -2382,6 +2382,6 @@
   inherits: false;
 }
 .hidden-navbar {
-  transform: translateY(-150%);
+  transform: translateY(-150%) !important;
   transition: transform 0.3s ease-in-out;
 }
