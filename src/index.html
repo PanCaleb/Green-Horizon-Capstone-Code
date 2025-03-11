@@ -101,7 +101,7 @@
                 
                 <p class="text-lg leading-relaxed text-center md:text-left">
                     L.T. Services Inc. offers complete janitorial services to commercial and government facilities. Founded in 1982, L.T. Services is based in Falls Church, Virginia. We are a stable, local, 
-                    owner-operated, and professional company with over 25 years of experience and a leader in the industry. We staff our management team with the brightest and best within the industry. Our 
+                    owner-operated, and professional company with over 40 years of experience and a leader in the industry. We staff our management team with the brightest and best within the industry. Our 
                     management approach is direct and effective. The key to this is communication: both internally and externally. This has been our core value from the beginning and will continue to serve 
                     our future success.
                 </p>
@@ -122,7 +122,92 @@
                 </a>
             </div>
         </div>
-    </section>       
+    </section> 
+    
+     <!-- Our Service in Numbers -->
+<section id="services-numbers" class="relative text-center pt-32 pb-20 text-white bg-cover bg-center bg-no-repeat" 
+style="background-image: url('../images/pexels-wendy-maxwell-22214243-8421466.jpg');">
+
+<!-- Dark Overlay -->
+<div class="absolute inset-0 bg-black/60 backdrop-blur-md" data-aos="fade-in"></div>
+
+<div class="relative z-10 max-w-4xl mx-auto px-6">
+    <h2 class="text-5xl font-extrabold drop-shadow-md text-white-600" data-aos="fade-down">Our Services in Numbers</h2>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center" data-aos="zoom-in">
+            <h3 class="text-4xl font-bold text-blue-600">
+                <span class="counter" data-target="40">0</span>+
+            </h3>
+            <p class="text-gray-600 mt-2">Years of Experience</p>
+        </div>
+
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center" data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="text-4xl font-bold text-blue-600">
+                <span class="counter" data-target="150">0</span>+
+            </h3>
+            <p class="text-gray-600 mt-2">Dedicated Employees</p>
+        </div>
+
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center" data-aos="zoom-in" data-aos-delay="400">
+            <h3 class="text-4xl font-bold text-blue-600">
+                <span class="counter" data-target="30">0</span>+
+            </h3>
+            <p class="text-gray-600 mt-2">Satisfied Clients</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- JavaScript for Number Animation -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll(".counter");
+
+    const animateCounter = (counter, start, end, duration) => {
+        let startTime = null;
+
+        const step = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const easedValue = Math.floor(start + (end - start) * easeOutQuad(progress));
+
+            counter.innerText = easedValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                counter.innerText = end; // Ensure exact final number
+            }
+        };
+
+        requestAnimationFrame(step);
+    };
+
+    const easeOutQuad = (t) => 1 - (1 - t) * (1 - t); // Easing function for smooth animation
+
+    const startCounters = () => {
+        setTimeout(() => {  // 🔹 Added delay before counting starts
+            counters.forEach(counter => {
+                const endValue = +counter.getAttribute("data-target");
+                animateCounter(counter, 0, endValue, 2000); // 2000ms (2 seconds) duration
+            });
+        }, 1000); // 🔹 Delay of 1 second (1000ms)
+    };
+
+    // Trigger animation when the section is in view
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounters();
+                observer.disconnect(); // Runs animation only once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector("#services-numbers"));
+});
+</script>
 
     <!-- Services Section -->
     <section id="services" class="py-10 bg-gray-100 text-center">
@@ -158,9 +243,9 @@
             <!-- Certifications -->
             <h2 class="text-3xl font-bold text-blue-600">Our Certifications</h3>
             <div class="flex overflow-x-auto mt-6 space-x-6 p-4 justify-center">
-                <img src="../images/green-seal.svg" alt="Green Seal Certificate" class="rounded-md">
-                <img src="../images/nmsdc-logo.svg" alt="MBE Certificate" class="rounded-md">
-                <img src="../images/iicrccertifiedlogo.svg" alt="Certification 3" class="rounded-md">
+                <img src="../images/green-seal.svg" alt="Green Seal Certificate" class="w-60 h-60 object-contain rounded-md">
+                <img src="../images/854764.jpg" alt="SWaM Certificate" class="w-60 h-60 object-contain rounded-md">
+                <img src="../images/iicrccertifiedlogo.svg" alt="Certification 3" class=" w-60 h-60 object-contain rounded-md">
             </div>
         </div>
     </section>
