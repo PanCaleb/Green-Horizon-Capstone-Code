@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../src/css/output.css" rel="stylesheet"> 
     <link rel="icon" type="image/x-icon" href="../images/whiteltfavicon.png">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>LT Services Inc.</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="bg-gray-100">
@@ -58,7 +59,9 @@
                     <a href="./about-us.html" class="transform transition duration-50 hover:scale-110 block px-4 py-2 md:px-0">About</a>
                     
                     <!-- Dropdown Menu -->
-                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-xl shadow-lg 
+                    opacity-0 invisible max-h-0 overflow-hidden transition-[max-height, opacity, visibility] 
+                    duration-300 ease-in-out group-hover:max-h-48 group-hover:opacity-100 group-hover:visible">
                         <li><a href="./membership.html" class="block px-4 py-2 hover:bg-gray-300 rounded-md">Membership</a></li>
                     </ul>
                 </li>
