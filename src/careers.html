@@ -189,12 +189,14 @@
                     <label for="phone" class="block text-gray-700 font-semibold">Email</label>
                     <input type="email" id="email" name="email" required
                         class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div id="email-error" class="error-msg"></div>
                 </div>
 
                 <div>
                     <label for="phone" class="block text-gray-700 font-semibold">Phone Number</label>
                     <input type="phone" id="phone" name="phone" required
                         class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div id="phone-error" class="error-msg"></div>
                 </div>
     
                 <div>
@@ -212,7 +214,7 @@
 
 
                 <div>
-                    <label for="attachment" class="block text-gray-700 font-semibold">Attachment</label>
+                    <label for="attachment" class="block text-gray-700 font-semibold">Attach your Resume and/or Cover Letter</label>
                     <input type="file" id="attachment" name="attachment" accept=".doc, .pdf"
                            class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
@@ -238,4 +240,44 @@
             <p class></p>
         </footer>
     </section>
+
+    <script>
+        const emailField = document.getElementById("email");
+        const phoneField = document.getElementById("phone");
+        const form = document.querySelector("form");
+    
+        const emailError = document.getElementById("email-error");
+        const phoneError = document.getElementById("phone-error");
+    
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^[0-9\s\-()+]{10,}$/;
+    
+        function validateInput(input, regex, errorElement, errorMessage) {
+            const isValid = regex.test(input.value.trim());
+            input.classList.toggle("invalid", !isValid);
+            input.classList.toggle("valid", isValid);
+            errorElement.textContent = isValid ? "" : errorMessage;
+            return isValid;
+        }
+    
+        emailField.addEventListener("input", () =>
+            validateInput(emailField, emailRegex, emailError, "Please enter a valid email address.")
+        );
+    
+        phoneField.addEventListener("input", () =>
+            validateInput(phoneField, phoneRegex, phoneError, "Please enter a valid phone number.")
+        );
+    
+        form.addEventListener("submit", function (e) {
+            const emailValid = validateInput(emailField, emailRegex, emailError, "Please enter a valid email address.");
+            const phoneValid = validateInput(phoneField, phoneRegex, phoneError, "Please enter a valid phone number.");
+    
+            if (!emailValid || !phoneValid) {
+                e.preventDefault();
+            }
+        });
+    </script>
+    
+    
+      
 </body>
